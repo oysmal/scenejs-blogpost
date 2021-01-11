@@ -4,7 +4,7 @@
   --wheel-color: #000000;
   --door-handle-color: #bbb;
   --bottom-color: #bbb;
-  --rim-color: #bbb;
+  --rim-color: #f1f1f1;
   --light-color: #ffff00;
 }
 
@@ -12,8 +12,8 @@
   width: 200px;
   height: 100px;
   position: absolute;
-  right: 0px;
-  top: 400px;
+  right: 300px;
+  bottom: 0px;
   display: flex;
   transform: translateZ(0);
 }
