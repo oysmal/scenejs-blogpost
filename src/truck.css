@@ -1,0 +1,170 @@
+:root {
+  --cockpit-color: #228833;
+  --body-color: #228833;
+  --wheel-color: #000000;
+  --door-handle-color: #bbb;
+  --bottom-color: #bbb;
+  --rim-color: #bbb;
+  --light-color: #ffff00;
+}
+
+.truck {
+  width: 200px;
+  height: 100px;
+  position: absolute;
+  right: 0px;
+  top: 400px;
+  display: flex;
+  transform: translateZ(0);
+}
+
+div {
+  border-radius: 5px;
+}
+
+.truck .body {
+  margin-top: -10%;
+  width: 60%;
+  height: 80%;
+  background-color: var(--body-color);
+}
+
+.triangle-up {
+  color: white;
+  width: 0px;
+  height: 0px;
+  border: 32px solid var(--cockpit-color);
+  border-top-color: transparent;
+  border-right-color: transparent;
+  border-bottom-color: white;
+  border-left-color: transparent;
+}
+
+.truck .cockpit {
+  width: 40%;
+  height: 60%;
+  position: relative;
+  display: flex;
+}
+
+.truck .cockpit .window {
+  border-radius: 0;
+  position: absolute;
+  border-width: 24px;
+  top: -32%;
+  left: 25%;
+  z-index: 1;
+}
+
+.truck .cockpit .window-frame {
+  border-bottom-color: var(--cockpit-color);
+  border-radius: 0;
+  position: absolute;
+  top: -52%;
+  left: 15%;
+}
+
+.truck .cockpit .window-right {
+  background-color: white;
+  position: absolute;
+  border-top-left-radius: 2px;
+  top: 8%;
+  left: 54%;
+  width: 40%;
+  height: 40%;
+  z-index: 11;
+}
+
+.truck .cockpit .back-part {
+  width: 48%;
+  height: 100%;
+  background-color: var(--cockpit-color);
+  position: absolute;
+  right: 0;
+}
+
+.truck .cockpit .bottom-part {
+  position: absolute;
+  height: 51%;
+  bottom: 0;
+  right: 0;
+  left: 15%;
+  background-color: var(--cockpit-color);
+  z-index: 12;
+}
+
+.door-handle {
+  position: absolute;
+  top: 60%;
+  height: 5%;
+  width: 15%;
+  right: 10%;
+  background: var(--door-handle-color);
+  z-index: 13;
+}
+
+.cockpit .lights {
+  left: 11%;
+  position: absolute;
+  height: 15%;
+  bottom: 15%;
+  width: 3%;
+  background-color: var(--light-color);
+  border: 1px solid gray;
+}
+
+.connector {
+  width: 10%;
+}
+
+.truck .bottom {
+  position: absolute;
+  width: 96%;
+  left: 5%;
+  bottom: 35%;
+  height: 10%;
+  border-radius: 2px;
+  background-color: var(--bottom-color);
+  z-index: 15;
+}
+
+.wheel {
+  position: absolute;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  background-color: var(--wheel-color);
+  bottom: 25px;
+  z-index: 20;
+}
+
+.wheel.front {
+  left: 15%;
+}
+
+.wheel.middle {
+  left: 45%;
+}
+.wheel.back {
+  left: 80%;
+}
+
+.wheel .rim {
+  position: absolute;
+  width: 40%;
+  height: 40%;
+  background-color: var(--rim-color);
+  left: 30%;
+  top: 30%;
+  border-radius: 50%;
+}
+
+.shadow {
+  position: absolute;
+  width: 90%;
+  height: 7%;
+  background-color: #f1f1f1;
+  bottom: 22%;
+  right: 2.5%;
+  border-radius: 50%;
+}
