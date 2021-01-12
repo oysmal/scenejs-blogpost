@@ -1,3 +1,26 @@
+html,
+body,
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+
+.items > div {
+  margin-bottom: 15px;
+}
+
+h2 {
+  color: #222222;
+  font-family: Helvetica, Sans-Serif;
+  text-align: center;
+  margin-bottom: 1em;
+}
+
 .item {
   width: 400px;
   height: 50px;
@@ -9,16 +32,120 @@
   justify-content: space-around;
   border-radius: 2px;
 }
-.item .bar {
-  width: 100%;
+.item .bar,
+.bar60,
+.bar90 {
   height: 25%;
   background-color: #a1a1a1;
   border-radius: 2px;
 }
 
-.item .bar:nth-child(2) {
+.item .bar {
+  width: 100%;
+}
+
+.item .bar60 {
   width: 60%;
 }
-.item .bar:nth-child(3) {
+.item .bar90 {
   width: 90%;
+}
+
+body {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 60px auto;
+  grid-template-areas:
+    "header"
+    "main";
+}
+
+header {
+  grid-area: header;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 2px solid #f1f1f1;
+  padding: 5px;
+}
+
+header .item:last-child {
+  width: 60px;
+  background-color: #f1f1f1;
+}
+
+header .item {
+  width: 200px;
+  background-color: white;
+}
+
+header .item .bar,
+.bar60,
+.bar90 {
+  height: 20%;
+}
+
+main {
+  grid-area: main;
+  margin: 0 auto;
+  margin-top: 100px;
+}
+
+.border-top {
+  border-top: 1px solid #222222;
+}
+.border-bottom {
+  border-bottom: 1px solid #222222;
+}
+
+.center {
+  display: flex;
+  justify-content: space-around;
+}
+
+button {
+  cursor: pointer;
+  margin: 0;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 2px;
+  color: white;
+  font-weight: 500;
+  text-transform: uppercase;
+  background-color: var(--body-color);
+  box-shadow: 1px 2px 5px 1px rgba(0, 0, 0, 0.4);
+}
+button:hover {
+  filter: brightness(1.1);
+}
+button:active {
+  filter: brightness(0.8);
+}
+
+.modal {
+  position: fixed;
+  background: white;
+  padding: 2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  z-index: 20;
+  visibility: hidden;
+}
+
+.backdrop {
+  background-color: rgba(0, 0, 0, 0.2);
+  visibility: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.visible {
+  visibility: visible;
 }
