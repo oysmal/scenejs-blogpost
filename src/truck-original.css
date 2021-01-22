@@ -30,6 +30,17 @@ div {
   position: relative;
 }
 
+.triangle-up {
+  color: white;
+  width: 0px;
+  height: 0px;
+  border: 32px solid var(--cockpit-color);
+  border-top-color: transparent;
+  border-right-color: transparent;
+  border-bottom-color: white;
+  border-left-color: transparent;
+}
+
 .truck .cockpit {
   width: 40%;
   height: 60%;
@@ -38,39 +49,31 @@ div {
 }
 
 .truck .cockpit .window {
-  border: 0;
-  position: absolute;
-  z-index: 1;
-  width: 30%;
-  height: 40%;
-  background: white;
-  clip-path: polygon(100% 0%,0% 100%,100% 100%);
-  left: 25%;
-  top: 5px;
   border-radius: 0;
+  position: absolute;
+  border-width: 24px;
+  top: -32%;
+  left: 25%;
+  z-index: 1;
 }
 
 .truck .cockpit .window-frame {
+  border-bottom-color: var(--cockpit-color);
   border-radius: 0;
   position: absolute;
-  top: 5px;
+  top: -52%;
   left: 15%;
-  width: 38%;
-  height: 50%;
-  background: var(--cockpit-color);
-  clip-path: polygon(100% 0%,0% 100%,100% 100%);
 }
 
 .truck .cockpit .window-right {
   background-color: white;
   position: absolute;
+  border-top-left-radius: 2px;
   top: 8%;
-  left: 55%;
+  left: 54%;
   width: 40%;
   height: 40%;
   z-index: 11;
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
 }
 
 .truck .cockpit .back-part {
@@ -106,7 +109,7 @@ div {
   position: absolute;
   height: 15%;
   bottom: 15%;
-  width: 5%;
+  width: 3%;
   background-color: var(--light-color);
   border: 1px solid gray;
 }
