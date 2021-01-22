@@ -11,5 +11,8 @@
   "license": "ISC",
   "dependencies": {
     "scenejs": "^1.4.3"
+  },
+  "devDependencies": {
+    "cssnano": "^4.1.10"
   }
 }

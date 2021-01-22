@@ -47,7 +47,6 @@ document.addEventListener("DOMContentLoaded", () => {
           truckBounds.height;
         const x2 = x1 - truckBounds.width / 2;
         const y2 = y1 - truckBounds.height / 3;
-        console.log(y2);
 
         return {
           0: {
